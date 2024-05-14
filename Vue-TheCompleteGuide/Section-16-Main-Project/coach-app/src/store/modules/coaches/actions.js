@@ -10,7 +10,7 @@ export default {
     };
 
     const response = await fetch(
-      `https://vue-http-demo-85e9e.firebaseio.com/coaches/${userId}.json`,
+      `https://coachapp-c7577-default-rtdb.firebaseio.com/coaches/${userId}.json`,
       {
         method: 'PUT',
         body: JSON.stringify(coachData)
@@ -34,7 +34,7 @@ export default {
     }
 
     const response = await fetch(
-      `https://vue-http-demo-85e9e.firebaseio.com/coaches.json`
+      `https://coachapp-c7577-default-rtdb.firebaseio.com/coaches.json`
     );
     const responseData = await response.json();
 
