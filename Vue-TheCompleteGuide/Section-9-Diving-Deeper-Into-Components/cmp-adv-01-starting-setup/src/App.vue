@@ -42,7 +42,7 @@ export default {
 	data() {
 		return {
 			activeUser: {
-				name: 'Maximilian Schwarzmüller',
+				name: 'Tom McAloon',
 				description: 'Site owner and admin',
 				role: 'admin',
 			},
