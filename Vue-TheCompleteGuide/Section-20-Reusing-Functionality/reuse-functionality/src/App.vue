@@ -1,47 +1,60 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <add-user></add-user>
+    <delete-user></delete-user>
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import AddUser from './components/AddUser.vue';
+import DeleteUser from './components/DeleteUser.vue';
+
+export default {
+  components: {
+    AddUser,
+    DeleteUser,
+  },
+};
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+html {
+  font-family: sans-serif;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+body {
+  margin: 0;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+main {
+  width: 40rem;
+  margin: 3rem auto;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+section {
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+button {
+  font: inherit;
+  background-color: #310131;
+  border: 1px solid #310131;
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: #770e77;
+  border-color: #770e77;
 }
 </style>
