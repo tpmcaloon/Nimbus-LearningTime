@@ -1,11 +1,11 @@
 export default [
   {
-    id: "max",
+    id: "tom",
     fullName: "Tom McAloon",
     projects: [
-      { id: "max_p1", title: "Record the Vue course" },
-      { id: "max_p2", title: "Create more courses" },
-      { id: "max_p3", title: "Keep content updated" },
+      { id: "tom_p1", title: "Record the Vue course" },
+      { id: "tom_p2", title: "Create more courses" },
+      { id: "tom_p3", title: "Keep content updated" },
     ],
   },
   {
