@@ -1,21 +1,26 @@
 <?php
+
 namespace App\Policies;
+
 use App\Models\Listing;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+
 class ListingPolicy
 {
     use HandlesAuthorization;
+
     /**
      * Determine whether the user can view any models.
      *
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
         return true;
     }
+
     /**
      * Determine whether the user can view the model.
      *
@@ -23,10 +28,11 @@ class ListingPolicy
      * @param  \App\Models\Listing  $listing
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Listing $listing)
+    public function view(?User $user, Listing $listing)
     {
         return true;
     }
+
     /**
      * Determine whether the user can create models.
      *
@@ -37,6 +43,7 @@ class ListingPolicy
     {
         return true;
     }
+
     /**
      * Determine whether the user can update the model.
      *
@@ -48,6 +55,7 @@ class ListingPolicy
     {
         return true;
     }
+
     /**
      * Determine whether the user can delete the model.
      *
@@ -59,6 +67,7 @@ class ListingPolicy
     {
         return true;
     }
+
     /**
      * Determine whether the user can restore the model.
      *
@@ -70,6 +79,7 @@ class ListingPolicy
     {
         return true;
     }
+
     /**
      * Determine whether the user can permanently delete the model.
      *
